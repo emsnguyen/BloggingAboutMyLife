@@ -1,0 +1,141 @@
+.title-link {
+    text-decoration: none;
+    font-family: 'Alegreya Sans',Helvetica,Arial,sans-serif;
+    font-size: 40px;
+    color: #6d5160;
+    font-weight: 800;
+    line-height: 50px;
+}
+.title-link:hover {
+    text-decoration: underline;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Alegreya Sans',Helvetica,Arial,sans-serif;
+}
+body {
+    background-image: url("../images/wallpaper-white.jpg");
+}
+.main-content {
+}
+.wrapper {
+    padding-top: 0px;
+    width: 980px;
+    margin: auto;
+    margin-top: -10px;
+    background-color: white;
+    background-image: none;
+    box-shadow: 0 2px 10px 7px rgba(0,0,0,.29);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 180px 1fr;
+}
+.subtitle {
+    font-size: 20px;
+}
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding-right: 15px;
+}
+.icon-gg, .icon-fb, .icon-twitter {
+    width: 20px;
+    background-repeat: no-repeat;
+    display: inline-flex;
+    height: 20px;
+}
+.icon-fb {
+    background-image: url(../images/fb.PNG);
+}
+.icon-gg {
+    background-image: url(../images/google.PNG);
+}
+.icon-twitter {
+    background-image: url(../images/twitter.PNG);
+}
+.right {
+    width: 23%;
+    float: right;
+    margin-right: 20px;
+    padding-top: 30px;
+}
+.left {
+    width: 73%;
+    float: left;
+    padding-top: 30px;
+}
+.lblShare , .lblWebsite{
+    font-weight: bold;
+    font-size: 18px;
+}
+.share-box a {
+    text-decoration: none;
+    color: black;
+}
+.counter-item {
+    border-radius: 4px;
+    box-shadow: 0 1px 2px #595959;
+    padding: 2px 2px 1px;
+}
+a{
+    color: black;
+}
+.footer{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+}
+.footer-info a {
+    font-size: 15px;
+}
+.page-counter {
+    padding-top: 40px;
+}
+.left-bottom {
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+.create-website-box {
+    box-shadow: 0 2px 10px rgba(0,0,0,.29);
+    border-radius: 10px;
+    padding: 10px;
+}
+.wrapper-sharebox {
+    box-shadow: 0 2px 10px rgba(0,0,0,.29);
+    border-radius: 10px;
+    padding: 1px 10px;
+    margin-bottom: 30px;
+}
+.btn-try {
+    display: inline-block;
+    font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
+    outline: 0;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: none;
+    background-color: #6c5160;
+    border-radius: 18px;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+}
+.share-box span {
+    text-decoration: underline;
+}
+ul {
+    list-style: none;
+    display: inline-grid;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+}
+hr {
+    width: 95%;
+}

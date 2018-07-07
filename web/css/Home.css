@@ -1,0 +1,91 @@
+.section {
+    width: 98%;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 15px;
+    border-bottom: 3px dotted rgba(0,0,0,.2);
+}
+.icon-pencil, .icon-photo, .icon-quotes {
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    float:left;
+}
+.icon-pencil {
+    background-image: url(../images/pencil.PNG);
+}
+.icon-photo {
+    background-image: url(../images/photos.PNG);
+}
+.icon-quotes {
+    background-image: url(../images/quotes.PNG);
+}
+.entry {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.title a {
+    color: black;
+    font-size: 23px;
+}
+.lblMyBlog {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.controls {
+    float: right;
+    margin-top: 20px;
+}
+.date {
+    margin-top: 15px;
+    font-style: italic;
+}
+.title {
+    color: #6d5160;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: bold;
+}
+.left-bottom {
+    text-align: center;
+}
+.left-bottom a {
+    color: black;
+}
+.entry .content {
+    margin-left: 45px;
+    overflow: hidden;
+}
+.entry .title {
+    display: -webkit-inline-box;
+    color: #6d5160;
+    line-height: 47px;
+    margin-left: 16px;
+    font-weight: 800;
+}
+.btn-try:hover {
+    background-color:#a95d87;
+}
+ul {
+    list-style: none;
+}
+li {
+    line-height: 22px;
+}
+.navbar-home {
+    font-weight: bold;
+}
+.navbar-about-me {
+    font-weight: normal;
+}
+.left-bottom .overview {
+    border-radius: 6px;
+}
+.overview:hover {
+    background-color: palevioletred;
+    text-decoration: underline;
+    padding: 4px;
+}

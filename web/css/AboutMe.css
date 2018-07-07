@@ -1,0 +1,31 @@
+.author-info {
+    padding: 20px 40px;
+}
+.author-info-details{
+
+}
+.author-signature{
+    margin-top: 60px;
+}
+.hand-signature {
+    background-image: url(../images/signature.PNG);
+    height: 250px;
+    width: 350px;
+    /* display: inline-block; */
+    background-repeat: no-repeat;
+}
+.lblAboutMe {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding: 40px 40px 0 40px;
+}
+.navbar-home {
+    font-weight: normal;
+}
+.navbar-about-me {
+    font-weight: bold;
+}
+.wrapper {
+    padding-right: 0px;
+}

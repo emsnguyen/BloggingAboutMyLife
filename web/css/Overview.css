@@ -1,0 +1,50 @@
+table th, table td {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    line-height: 22px;
+    text-align: left;
+    vertical-align: top;
+}
+.icon-comment, .icon-thumbs-up {
+    width: 25px;
+    height: 25px;
+    background-repeat: repeat;
+    background-size: cover;
+    display: inline-block;
+}
+.icon-thumbs-up {
+    background-image: url("../images/like.PNG");
+}
+.icon-comment {
+    background-image: url("../images/comment.PNG");
+}
+.align-right{
+    text-align: right;
+}
+span.comments, span.likes {
+    vertical-align: top;
+}
+td:first-child {
+    width: 60%;
+}
+.lblMyBlog {
+    padding: 20px;
+}
+th {
+    font-weight: normal;
+}
+table {
+    table-layout: fixed;
+}
+.entry-table {
+    width: 90%;
+    padding-left: 40px;
+    border-spacing: 0;
+    margin-bottom: 40px;
+}
+.paging {
+    text-align: center;
+}
+.paging a {
+    padding: 10px;
+}
