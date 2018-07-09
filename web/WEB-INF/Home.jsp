@@ -23,39 +23,17 @@
                     My Blog
                 </div>
                 <c:forEach items="${entries}" var="e">
-                    <!--start of section -->
-                    <div class="section">
-                        <!--icon-->
-                        <c:choose>
-                            <c:when test="${e.categoryID eq 1}">
-                                <div class="icon-quotes"></div>
-                            </c:when>
-                            <c:when test="${e.categoryID eq 2}">
-                                <div class="icon-photo"></div>
-                            </c:when>
-                            <c:otherwise>
-                                <div class="icon-pencil"></div>
-                            </c:otherwise>
-                        </c:choose>
-                        <!--end of icon-->
-                        <!--start of entry-->
-                        <div class="entry">
-                            <div class="controls">
-                                <span class="date">
-                                    <fmt:formatDate value="${e.publishedDate}"
-                                                    pattern="dd-MM-yyyy"/>
-                                </span>
-                            </div>
-                            <div class="title">
-                                <a href="${pageContext.servletContext.contextPath}/entrydetails?ID=${e.ID}">${e.name}</a>
-                            </div>
-                            <div class="content">
-                                ${e.content}
-                            </div>
-                        </div>
-                        <!--end of entry-->
-                    </div>
-                    <!--end of section-->
+                    <c:choose>
+                        <c:when test="${e.categoryID eq 1}">
+                            <%@include file="Entry_Quotes.jsp" %>
+                        </c:when>
+                        <c:when test="${e.categoryID eq 2}">
+                            <%@include file="Entry_Photo.jsp" %>
+                        </c:when>
+                        <c:otherwise>
+                            <%@include file="Entry_Others.jsp" %>
+                        </c:otherwise>
+                    </c:choose>
                 </c:forEach>
 
                 <div class="left-bottom">

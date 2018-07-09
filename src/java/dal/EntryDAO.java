@@ -11,7 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class EntryDAO extends BaseDAO {
-
     public ArrayList<Entry> Get3LatestEntries() throws Exception {
         ArrayList<Entry> entries = new ArrayList<>();
         PreparedStatement ps = null;
@@ -59,8 +58,8 @@ public class EntryDAO extends BaseDAO {
                     + "      ,[Content]\n"
                     + "      ,[PublishedDate]\n"
                     + "      ,[CategoryID]\n"
-                    + "  FROM [Entry]) AS X\n"
-                    + "  WHERE  RN BETWEEN  ? AND ?";
+                    + "  FROM [Entry] WHERE ID <> 12) AS X\n"
+                    + "  WHERE  RN BETWEEN ? AND ?";
             connection = getConnection();
             ps = connection.prepareStatement(query);
             ps.setInt(1, start);
@@ -77,8 +76,10 @@ public class EntryDAO extends BaseDAO {
                 String month = months[monthIndex];
                 String monthYear = month + " " + year;
                 if (map.containsKey(monthYear)) {
+                    System.out.println("monthyear existed: " + monthYear + ", title: " + e.getName());
                     map.get(monthYear).add(e);
                 } else {
+                    System.out.println("monthyear new: " + monthYear + ", title: " + e.getName());
                     ArrayList<Entry> entries = new ArrayList<>();
                     entries.add(e);
                     map.put(monthYear, entries);
@@ -138,7 +139,8 @@ public class EntryDAO extends BaseDAO {
             ps = connection.prepareStatement(query);
             rs = ps.executeQuery();
             if (rs.next()) {
-                total = rs.getInt("Total");
+                //minus one About Me article
+                total = rs.getInt("Total")-1;
             }
             close(connection, ps, rs);
         } catch (Exception ex) {

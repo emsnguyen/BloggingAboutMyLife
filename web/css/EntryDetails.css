@@ -1,13 +1,17 @@
 .icon-pencil, .icon-photo, .icon-quotes {
-    margin-top: 30px;
     background-repeat: no-repeat;
 }
 .section {
     margin-top: 0px;
 }
-.date {
-    margin-top: 40px;
+.title p {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 32.8px;
 }
-.controls {
-    margin-top: 30px;
+.entry .title {
+    pointer-events: none;
+}
+.title a {
+    text-decoration: none;
 }

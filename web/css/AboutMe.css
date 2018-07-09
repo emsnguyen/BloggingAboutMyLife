@@ -8,7 +8,7 @@
     margin-top: 60px;
 }
 .hand-signature {
-    background-image: url(../images/signature.PNG);
+    /*background-image: url(../images/signature.PNG);*/
     height: 250px;
     width: 350px;
     /* display: inline-block; */

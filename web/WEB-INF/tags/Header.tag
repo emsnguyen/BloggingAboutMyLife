@@ -11,7 +11,7 @@
 <link href="${pageContext.servletContext.contextPath }/css/Header.css" rel="stylesheet" type="text/css"/>
 <div class="header">
     <div class="title-wrapper">
-        <a class="title-link" href="#">Blogging About My Life</a>
+        <a class="title-link" href="${pageContext.servletContext.contextPath}/home">Blogging About My Life</a>
         <p class="subtitle">Welcome to my blog</p>
     </div>
     <div class="navbar">

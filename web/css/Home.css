@@ -89,3 +89,25 @@ li {
     text-decoration: underline;
     padding: 4px;
 }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.float-left {
+    float: left;
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+.content-quotes {
+    border-right: 5px solid;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    margin-left: 300px !important;
+    line-height: 1.5;
+    font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif !important;
+}
+.content p {
+    margin-top: 0px;
+}

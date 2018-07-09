@@ -1,4 +1,4 @@
-table th, table td {
+.entry-table th, .entry-table td {
     padding: 8px;
     border-top: 1px solid #ddd;
     line-height: 22px;
@@ -24,16 +24,16 @@ table th, table td {
 span.comments, span.likes {
     vertical-align: top;
 }
-td:first-child {
+.entry-table td:first-child {
     width: 60%;
 }
 .lblMyBlog {
     padding: 20px;
 }
-th {
+.entry-table th {
     font-weight: normal;
 }
-table {
+.entry-table {
     table-layout: fixed;
 }
 .entry-table {

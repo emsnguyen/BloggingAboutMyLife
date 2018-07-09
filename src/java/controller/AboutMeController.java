@@ -5,11 +5,16 @@
  */
 package controller;
 
+import dal.BaseDAO;
+import dal.EntryDAO;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Entry;
 
 /**
  *
@@ -18,7 +23,19 @@ import javax.servlet.http.HttpServletResponse;
 public class AboutMeController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/WEB-INF/AboutMe.jsp").forward(request, response);
+        try {
+            EntryDAO entryDB = new EntryDAO();
+            Entry e = entryDB.get(12);
+            if (e == null) {
+                getServletContext().getRequestDispatcher("/BlankPage.jsp").forward(request, response);
+                return;
+            }
+            request.setAttribute("e", e);
+            request.setAttribute("imgFolder", BaseDAO.imgFolder);
+            getServletContext().getRequestDispatcher("/WEB-INF/AboutMe.jsp").forward(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(AboutMeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -13,44 +13,50 @@
     <t:Header></t:Header>
         <div class="main-content">
             <div class="left">
-                <jsp:invoke fragment="left_content"/>
-            </div>
-            <!--end of left-->
-            <div class="right">
-                <div class="wrapper-sharebox">
-                    <p class="lblShare">Share this page</p>
-                    <ul>
-                        <li>
-                            <a class="share-box" href="#">
-                                <i class="icon-fb"></i>
-                                <span>Share on Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="share-box" href="#">
-                                <i class="icon-twitter"></i>
-                                <span>Share on Twitter</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="share-box" href="#">
-                                <i class="icon-gg"></i>
-                                <span>Share on Google+</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="create-website-box">
-                    <p class="lblWebsite">Create a website</p>
-                    <p>Everybody can create a website, it's easy</p>
-                    <div>
-                        <a href="#" class="btn-try">Try it for FREE now</a>
-                    </div>
-                </div>
-            </div>
-            <!--end of right-->
+            <jsp:invoke fragment="left_content"/>
         </div>
-        <!--end of main content-->
+        <!--end of left-->
+        <div class="right">
+            <div class="wrapper-sharebox">
+                <p class="lblShare">Share this page</p>
+                <table>
+                    <tr>
+                        <td>    
+                            <i class="icon-fb"></i>
+                        </td>
+                        <td>
+                            <a href="#">Share on Facebook</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="icon-twitter"></i>
+                        </td>
+                        <td>
+                            <a href="#">Share on Twitter</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="icon-gg"></i>
+                        </td>
+                        <td>
+                            <a href="#">Share on Google+</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="create-website-box">
+                <p class="lblWebsite">Create a website</p>
+                <p>Everybody can create a website, it's easy</p>
+                <div>
+                    <a href="#" class="btn-try">Try it for FREE now</a>
+                </div>
+            </div>
+        </div>
+        <!--end of right-->
+    </div>
+    <!--end of main content-->
     <hr> 
     <div class="footer">
         <div class="footer-info">
@@ -61,11 +67,11 @@
         </div>
         <div class="page-counter">
             <span class="counter-item">0</span>
+            <span class="counter-item">1</span>
+            <span class="counter-item">2</span>
+            <span class="counter-item">3</span>
             <span class="counter-item">0</span>
-            <span class="counter-item">0</span>
-            <span class="counter-item">0</span>
-            <span class="counter-item">0</span>
-            <span class="counter-item">0</span>
+            <span class="counter-item">5</span>
         </div>
     </div>
 </div>
