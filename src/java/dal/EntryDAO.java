@@ -46,8 +46,8 @@ public class EntryDAO extends BaseDAO {
     }
     public HashMap<String, ArrayList<Entry>> GetAllEntries(int start, int end) throws Exception {
         HashMap<String, ArrayList<Entry>> map = new HashMap<>();
-        String months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
-        "Sep", "Oct", "Nov", "Dec"};
+        String months[] = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST",
+        "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {

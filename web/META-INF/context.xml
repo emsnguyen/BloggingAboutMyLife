@@ -7,5 +7,5 @@
     <Environment name="port" value="1433" type="java.lang.String"></Environment>
     <Environment name="imgFolder" value="images" type="java.lang.String"></Environment>
     <Environment name="pageGap" value="2" type="java.lang.String"></Environment>
-    <Environment name="pageSize" value="1" type="java.lang.String"></Environment>
+    <Environment name="pageSize" value="3" type="java.lang.String"></Environment>
 </Context>
