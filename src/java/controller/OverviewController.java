@@ -9,7 +9,11 @@ import dal.BaseDAO;
 import dal.EntryDAO;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -17,12 +21,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Entry;
+import sun.reflect.generics.tree.Tree;
 import utils.HtmlHelper;
 
 /**
  *
  * @author lenovo
  */
+class DescOrder implements Comparator<Date> {
+    @Override
+    public int compare(Date o1, Date o2) {
+        return o2.compareTo(o2);
+    }
+}
+
 public class OverviewController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -45,7 +57,7 @@ public class OverviewController extends HttpServlet {
             }
             int pageGap = Integer.parseInt(BaseDAO.pageGap);
             int pageSize = Integer.parseInt(BaseDAO.pageSize);
-            int start = (pageIndex-1)*pageSize + 1;
+            int start = (pageIndex - 1) * pageSize + 1;
             int end = start + pageSize - 1;
             int totalRecords = entryDB.getTotal();
             int totalPage = totalRecords / pageSize + ((totalRecords % pageSize > 0) ? 1 : 0);
@@ -54,7 +66,7 @@ public class OverviewController extends HttpServlet {
                 return;
             }
             String paging = HtmlHelper.paging(totalPage, pageGap, pageIndex);
-            HashMap<String, ArrayList<Entry>> entryMap = entryDB.GetAllEntries(start, end);
+            LinkedHashMap<String, ArrayList<Entry>> entryMap = entryDB.GetAllEntries(start, end);
             request.setAttribute("map", entryMap);
             request.setAttribute("paging", paging);
             getServletContext().getRequestDispatcher("/WEB-INF/Overview.jsp").forward(request, response);

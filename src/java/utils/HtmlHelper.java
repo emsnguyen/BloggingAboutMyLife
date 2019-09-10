@@ -12,7 +12,7 @@ public class HtmlHelper {
     }
     public static String paging(int totalPage, int pageGap, int currentPage) {
         String result = "";
-        if (currentPage > pageGap) {
+        if (currentPage > pageGap+1) {
             result += generateHyperlink(1, "First");
         }
         for (int i = Math.max(currentPage-pageGap, 1); i < currentPage; i++) {

@@ -7,6 +7,7 @@ import model.Entry;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,8 +45,8 @@ public class EntryDAO extends BaseDAO {
         }
         return entries;
     }
-    public HashMap<String, ArrayList<Entry>> GetAllEntries(int start, int end) throws Exception {
-        HashMap<String, ArrayList<Entry>> map = new HashMap<>();
+    public LinkedHashMap<String, ArrayList<Entry>> GetAllEntries(int start, int end) throws Exception {
+        LinkedHashMap<String, ArrayList<Entry>> map = new LinkedHashMap<>();
         String months[] = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST",
         "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
         PreparedStatement ps = null;
@@ -76,10 +77,10 @@ public class EntryDAO extends BaseDAO {
                 String month = months[monthIndex];
                 String monthYear = month + " " + year;
                 if (map.containsKey(monthYear)) {
-                    System.out.println("monthyear existed: " + monthYear + ", title: " + e.getName());
+//                    System.out.println("monthyear existed: " + monthYear + ", title: " + e.getName());
                     map.get(monthYear).add(e);
                 } else {
-                    System.out.println("monthyear new: " + monthYear + ", title: " + e.getName());
+//                    System.out.println("monthyear new: " + monthYear + ", title: " + e.getName());
                     ArrayList<Entry> entries = new ArrayList<>();
                     entries.add(e);
                     map.put(monthYear, entries);
